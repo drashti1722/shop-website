@@ -1,0 +1,80 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                body
+                {
+                    background-color:rgb(204, 238, 204);
+                }
+                .navbar{
+                    margin-left: 70%;
+                    
+                  
+                }
+                a{
+                    color: rgb(130, 206, 140);
+                    font-size: 200%;
+                   
+                }
+                h1{
+                    border: 1px solid black;
+                    text-align: center;
+                    background-color: rgb(104, 236, 131);
+                    color: white;
+                }
+                .topnav{
+                    border: 1px solid black;
+                    padding-bottom: 1%;
+                    font-size: 200%;
+                    
+                    
+                    
+                }
+                .sec{
+                    text-align: center;
+                    display: flex;
+                }
+                .fy{    
+                        
+                        padding-left: 2%;
+                        margin-right: 2%;
+                        padding-right: 3%;
+                        background-color: rgb(161, 230, 116);
+                        border: 1px solid black;
+                       
+                        
+                    }
+                    .a{
+                        border: 1px solid black;
+                        padding-bottom: 5%;
+                        background-color: black;
+                        color: white;
+                        text-align: center;
+                    }
+
+                </style>
+        </head>
+        <body>
+            <nav>
+            <div class="navbar"> 
+                <a href="#home">Home|</a>
+                <a href="#news">News|</a>
+                <a href="#contactus">Contactus|</a>
+                <a href="#about">About|</a>
+            </div>
+            </nav>
+            <br>  <h1> Shopping </h1>
+            <br>
+            <div class="sec">
+                {% for i in a %}
+                <div class="fy">
+                   <h2>{{i.categories}}</h2> <br>
+                    <img src="{{i.img.url}}">
+                   name: <b>{{i.name}}</b><br>
+                   price: <b>{{i.price}}</b><br>
+                   colour:<b>{{i.colour}}</b>
+                </div>
+                {% endfor %}
+            </div>
+        </body>
+        </html>
